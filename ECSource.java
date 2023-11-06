@@ -11,8 +11,20 @@
 class ECSource {
   public static <T> boolean isUnivalueList(Node<T> head) {
     // todo
+      Node<T> curr = head;
 
-      
+          if(curr.next != null){
+
+              if(curr.val != curr.next.val){
+                  return false;
+              }
+
+              isUnivalueList(curr.next);
+          }
+
+
+
+
 
 
     return true;
